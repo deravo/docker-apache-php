@@ -18,16 +18,16 @@ RUN apt-get update && apt-get -y install perl ca-certificates curl libpcre3 libr
 # RUN apt-get -yq install mysql-server-5.6 mysql-client-5.6
 
 # Install Apache & PHP5 packages
-RUN apt-get -y install git subversion apache2 mysql-client libapache2-mod-php5 php5-mysql php5-apcu php5-curl php5-redis php5-mcrypt php5-apcu php5-gd php5-mcrypt php5-memcached php5-sqlite php5-common php5-dev php5-pear \
+RUN apt-get -y install git subversion apache2 mysql-client libapache2-mod-php5 php5-mysql php5-apcu php5-curl php5-redis php5-mcrypt php5-apcu php5-gd php5-mcrypt php5-memcached php5-sqlite php5-common php5-dev \
 
 # 用完包管理器后安排打扫卫生可以显著的减少镜像大小
     && apt-get clean \
     && apt-get autoclean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 
     # 安装 Composer，此物是 PHP 用来管理依赖关系的工具
     # Laravel Symfony 等时髦的框架会依赖它
-    # && curl -sS https://getcomposer.org/installer | php --install-dir=/usr/local/bin --filename=composer
+    && curl -sS https://getcomposer.org/installer | php --install-dir=/usr/local/bin --filename=composer
 
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
