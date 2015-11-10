@@ -28,7 +28,7 @@ RUN apt-get -y install git subversion apache2 mysql-client libapache2-mod-php5 p
     # 安装 Composer，此物是 PHP 用来管理依赖关系的工具
     # Laravel Symfony 等时髦的框架会依赖它
     && curl -sS https://getcomposer.org/installer \
-        | php -- --install-dir=/usr/local/bin --filename=composer
+        | php --install-dir=/usr/local/bin --filename=composer
 
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
