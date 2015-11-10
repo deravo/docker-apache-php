@@ -4,7 +4,7 @@ MAINTAINER Alvin Jin <jin@aliuda.cn>
 ENV DEBIAN_FRONTEND noninteractive
 
 # change apt source
-# ADD sources.list /etc/apt/sources.list
+ADD sources.list /etc/apt/sources.list
 
 # Install packages
 # RUN apt-get update && apt-get -y install openssh-server pwgen vim net-tools apt-utils dialog
