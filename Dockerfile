@@ -49,7 +49,7 @@ RUN chmod +x /*.sh
 RUN a2enmod rewrite
 
 # Configure /app folder with sample app
-RUN mkdir dir -p /app && rm -fr /var/www && ln -s /app /var/www/html
+RUN mkdir dir -p /app && rm -f /var/www/html/* && ln -s /app /var/www/html
 
 ADD ./i.php /app/
 
