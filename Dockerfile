@@ -7,11 +7,11 @@ ENV DEBIAN_FRONTEND noninteractive
 ADD sources.list /etc/apt/sources.list
 
 # Install packages
-# RUN apt-get update && apt-get -y install openssh-server pwgen vim net-tools apt-utils dialog
+RUN apt-get update && apt-get -y install openssh-server vim net-tools apt-utils dialog
 # RUN mkdir -p /var/run/sshd && sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/UsePAM.*/UsePAM no/g" /etc/ssh/sshd_config && sed -i "s/PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config
 
 # Install Runtime deps
-RUN apt-get update && apt-get -y install perl ca-certificates curl libpcre3 librecode0 libsqlite3-0 libxml2 zip unzip autoconf file g++ gcc libc-dev make pkg-config re2c memcached redis-server
+RUN apt-get -y install perl ca-certificates curl libpcre3 librecode0 libsqlite3-0 libxml2 zip unzip autoconf file g++ gcc libc-dev make pkg-config re2c memcached redis-server
 
 # For DaoCloud.io Use A MySQL SaaS Instance
 # Install MySQL 5.6
@@ -49,14 +49,10 @@ RUN chmod +x /*.sh
 RUN a2enmod rewrite
 
 # Configure /app folder with sample app
-RUN mkdir dir -p /app && rm -f /var/www/html/* && ln -s /app /var/www/html
+# RUN mkdir dir -p /app && rm -f /var/www/html/* && ln -s /app /var/www/html
+RUN rm -f /var/www/html/*
 
-ADD ./i.php /app/
-
-#Enviornment variables to configure php
-ENV PHP_UPLOAD_MAX_FILESIZE 10M
-ENV PHP_POST_MAX_SIZE 10M
-ENV AUTHORIZED_KEYS **None**
+ADD ./i.php /var/www/html/
 
 # ADD Volumes
 # VOLUME ["/etc/mysql","/var/lib/mysql","/app"]
