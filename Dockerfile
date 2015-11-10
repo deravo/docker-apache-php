@@ -11,14 +11,14 @@ RUN apt-get update && apt-get -y install openssh-server vim net-tools apt-utils 
 # RUN mkdir -p /var/run/sshd && sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/UsePAM.*/UsePAM no/g" /etc/ssh/sshd_config && sed -i "s/PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config
 
 # Install Runtime deps
-RUN apt-get -y install perl ca-certificates curl libpcre3 librecode0 libsqlite3-0 libxml2 zip unzip autoconf file g++ gcc libc-dev make pkg-config re2c memcached redis-server
+RUN apt-get -y install perl ca-certificates curl libpcre3 librecode0 libsqlite3-0 libxml2 zip unzip autoconf file g++ gcc libc-dev make pkg-config re2c memcached redis-server mcrypt
 
 # For DaoCloud.io Use A MySQL SaaS Instance
 # Install MySQL 5.6
 # RUN apt-get -yq install mysql-server-5.6 mysql-client-5.6
 
 # Install Apache & PHP5 packages
-RUN apt-get -y install git subversion apache2 mysql-client libapache2-mod-php5 php5-mysql php5-apcu php5-curl php5-redis php5-mcrypt php5-apcu php5-gd php5-mcrypt php5-memcached php5-sqlite php5-common php5-dev \
+RUN apt-get -y install git subversion apache2 mysql-client libapache2-mod-php5 php5-mysql php5-apcu php5-curl php5-redis php5-apcu php5-gd php5-mcrypt php5-memcached php5-sqlite php5-common php5-dev \
 
 # 用完包管理器后安排打扫卫生可以显著的减少镜像大小
     && apt-get clean \
