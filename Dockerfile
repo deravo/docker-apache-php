@@ -7,7 +7,7 @@ MAINTAINER Alvin Jin <jin@aliuda.cn>
 ADD sources.list /etc/apt/sources.list
 
 # Install packages
-RUN apt-get update && apt-get install -y --force-yes vim net-tools apt-utils dialog
+RUN apt-get update && apt-get install -y --force-yes vim net-tools apt-utils dialog bzip2 libssl-dev pkg-php-tools dh-php5 dpkg-dev zlib1g
 
 # Install Runtime deps
 RUN apt-get install -y --force-yes perl ca-certificates curl libpcre3 librecode0 libsqlite3-0 libxml2 zip unzip autoconf file g++ gcc libc-dev make pkg-config re2c memcached redis-server mcrypt libmcrypt-dev libz-dev git wget subversion php5-common php5-dev \
