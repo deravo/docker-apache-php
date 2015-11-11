@@ -7,10 +7,10 @@ MAINTAINER Alvin Jin <jin@aliuda.cn>
 ADD sources.list /etc/apt/sources.list
 
 # Install packages
-RUN apt-get update && apt-get -y install vim net-tools apt-utils dialog
+RUN apt-get update && apt-get install -y --force-yes vim net-tools apt-utils dialog
 
 # Install Runtime deps
-RUN apt-get -y install perl ca-certificates curl libpcre3 librecode0 libsqlite3-0 libxml2 zip unzip autoconf file g++ gcc libc-dev make pkg-config re2c memcached redis-server mcrypt libmcrypt-dev libz-dev git wget subversion php5-common php5-dev \
+RUN apt-get install -y --force-yes perl ca-certificates curl libpcre3 librecode0 libsqlite3-0 libxml2 zip unzip autoconf file g++ gcc libc-dev make pkg-config re2c memcached redis-server mcrypt libmcrypt-dev libz-dev git wget subversion php5-common php5-dev \
 
 # Install Apache & PHP5 packages
     && docker-php-ext-install mysql apcu curl redis gd mcrypt mbstring memcached sqlite pdo_mysql pdo_sqlite
