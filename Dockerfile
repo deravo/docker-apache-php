@@ -7,10 +7,11 @@ MAINTAINER Alvin Jin <jin@aliuda.cn>
 ADD sources.list /etc/apt/sources.list
 
 # Install packages
-RUN apt-get update && apt-get install -y --force-yes vim net-tools apt-utils dialog bzip2 libssl-dev pkg-php-tools dh-php5 dpkg-dev zlib1g
+RUN apt-get update && apt-get install -y --force-yes vim 
+#net-tools apt-utils dialog bzip2 libssl-dev pkg-php-tools dh-php5 dpkg-dev zlib1g
 
 # Install Runtime deps
-RUN apt-get install -y --force-yes perl ca-certificates curl libpcre3 librecode0 libsqlite3-0 libxml2 zip unzip autoconf file g++ gcc libc-dev make pkg-config re2c memcached redis-server mcrypt libmcrypt-dev libz-dev git wget subversion php5-common php5-dev \
+RUN apt-get install -y --force-yes curl zip unzip autoconf file memcached redis-server mcrypt libmcrypt-dev libz-dev git wget subversion \
 
 # Install Apache & PHP5 packages
     && docker-php-ext-install mysql apcu curl redis gd mcrypt mbstring memcached sqlite pdo_mysql pdo_sqlite
@@ -32,10 +33,10 @@ RUN a2enmod rewrite
 RUN php5enmod mcrypt
 
 # ADD scripts
-ADD hiredis.sh /hiredis.sh
-ADD hiredis.zip /root/hiredis.zip
-ADD phpiredis.zip /root/phpiredis.zip
-RUN /hiredis.sh
+#ADD hiredis.sh /hiredis.sh
+#ADD hiredis.zip /root/hiredis.zip
+#ADD phpiredis.zip /root/phpiredis.zip
+#RUN /hiredis.sh
 RUN /etc/init.d/memcached start
 RUN /etc/init.d/redis-server start
 
