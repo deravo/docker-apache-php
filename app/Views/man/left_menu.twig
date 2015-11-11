@@ -1,0 +1,68 @@
+            <!-- sidebar start -->
+            <div class="admin-sidebar" id="admin-sidebar">
+                <ul class="am-list admin-sidebar-list" id="admin-menu">
+                    <li><a href="/" class="pjax"><span class="am-icon-home"></span> 首页 <span class="am-icon-gear am-icon-spin am-fr am-margin-right admin-icon-blue"></span></a></li>
+
+                    <li class="admin-parent">
+                        <a class="am-cf" data-am-collapse="{target:'#collapse-users'}"><span class="am-icon-tags" style="color:purple"></span> 用户 <span class="am-icon-angle-down am-fr am-margin-right"></span></a>
+                        <ul class='am-list am-collapse admin-sidebar-sub' id="collapse-users">
+                            <li class=""><a href="/customer" class="pjax"><span class="am-icon-users am-text-success"></span> 列表 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                            <li class=""><a href="/customer/category" class="pjax"><span class="am-icon-line-chart am-text-secondary"></span> 等级 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="admin-parent">
+                        <a class="am-cf" data-am-collapse="{target:'#collapse-question'}"><span class="am-icon-cubes am-text-primary"></span> 题库 <span class="am-icon-angle-down am-fr am-margin-right"></span></a>
+                        <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-question">
+                            <li><a href="/question/topic" class="pjax"><span class="am-icon-cube am-text-success"></span> 题目 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                            <li><a href="/question/paper" class="pjax"><span class="am-icon-file-text-o am-text-danger"></span> 试卷 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                            <li><a href="/question/feedback" class="pjax"><span class="am-icon-warning am-text-warning"></span> 错题反馈 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="admin-parent">
+                        <a class="am-cf" data-am-collapse="{target:'#collapse-course'}"><span class="am-icon-flag am-text-danger"></span> 分类 <span class="am-icon-angle-down am-fr am-margin-right"></span></a>
+                        <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-course">
+                            <li><a href="/courses/subject" class="pjax"><span class="am-icon-list am-text-success"></span> 科目 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                            <li><a href="/courses/chapter" class="pjax"><span class="am-icon-list am-text-primary"></span> 章节 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                            <li><a href="/courses/knowledge" class="pjax"><span class="am-icon-list am-text-warning"></span> 考点 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="admin-parent">
+                        <a class="am-cf" data-am-collapse="{target:'#collapse-tools'}"><span class="am-icon-wrench"></span> 工具 <span class="am-icon-angle-down am-fr am-margin-right"></span></a>
+                        <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-tools">
+                            <li><a href="/tools/sms" class="pjax"><span class="am-icon-comments-o"></span> 短信 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                            <li><a href="/tools/email" class="pjax"><span class="am-icon-envelope-o"></span> 邮件 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                            <li><a href="/tools/setting" class="pjax"><span class="am-icon-gear"></span> 设置 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="admin-parent">
+                        <a class="am-cf" data-am-collapse="{target:'#collapse-wechat'}"><span class="am-icon-wechat"></span> 微信营销 <span class="am-icon-angle-down am-fr am-margin-right"></span></a>
+                        <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-wechat">
+                            <li><a href="/wechat/setting" class="pjax"><span class="am-icon-gear"></span> 设置 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="admin-parent">
+                        <a class="am-cf" data-am-collapse="{target:'#collapse-services'}"><span class="am-icon-bell-o"></span> 客户服务 <span class="am-icon-angle-down am-fr am-margin-right"></span></a>
+                        <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-services">
+                            <li><a href="/services/complain" class="pjax"><span class="am-icon-bullhorn"></span> 投诉 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                            <li><a href="/services/returnvisit" class="pjax"><span class="am-icon-comments-o"></span> 回访 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="admin-parent">
+                        <a class="am-cf" data-am-collapse="{target: '#collapse-system'}"><span class="am-icon-wrench"></span> 系统 <span class="am-icon-angle-down am-fr am-margin-right"></span></a>
+                        <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-system">
+                            <li><a href="/department" class="pjax"><span class="am-icon-puzzle-piece"></span> 部门<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+                            <li><a href="/manager" class="pjax"><span class="am-icon-users"></span> 管理员 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                            <li><a href="/logs" class="pjax"><span class="am-icon-filter"></span> 日志 <span class=" am-fr am-margin-right admin-icon-blue"></span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/auth/logout" class="logout_arch"><span class="am-text-danger am-icon-sign-out"> 注销</span></a></li>
+                </ul>
+            </div>
+            <!-- sidebar end -->
+
