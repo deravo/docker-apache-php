@@ -8,6 +8,8 @@ fi
 
 /etc/init.d/redis-server start
 
+php5enmod mcrypt
+
 source /etc/apache2/envvars
 
 tail -F /var/log/apache2/* &

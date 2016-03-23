@@ -2,7 +2,7 @@
         ServerAdmin webmaster@localhost
         DocumentRoot /var/www/html
         <Directory /var/www/html>
-                Options FollowSymLinks Indexes MultiViews
+                Options FollowSymLinks
                 # To make wordpress .htaccess work
                 AllowOverride All
                 Order allow,deny
@@ -21,7 +21,7 @@
 
         # Possible values include: debug, info, notice, warn, error, crit,
         # alert, emerg.
-        LogLevel warn
+        LogLevel error
 
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 

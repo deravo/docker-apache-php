@@ -15,6 +15,7 @@ make && make install
 
 echo "extension=phpiredis.so" > /etc/php5/mods-available/iredis.ini
 php5enmod iredis
+php5enmod mcrypt
 
 # apache2ctl restart
 
