@@ -40,8 +40,6 @@ ADD run.sh /run.sh
 
 RUN chmod +x /*.sh
 
-ENTRYPOINT ["/run.sh"]
-
 EXPOSE 80
 
-CMD ["php", "-a"]
+CMD ["/run.sh"]
