@@ -1,7 +1,7 @@
 FROM daocloud.io/ubuntu:vivid
 MAINTAINER Alvin Jin <jin@aliuda.cn>
 
-ENV DEBIAN_FRONTEND noninteractive
+# ENV DEBIAN_FRONTEND noninteractive
 
 # change apt source
 ADD sources.list /etc/apt/sources.list
@@ -13,7 +13,7 @@ RUN apt-get update && apt-get -y install openssh-server vim net-tools apt-utils 
 RUN apt-get -y install perl ca-certificates curl libpcre3 librecode0 libsqlite3-0 libxml2 zip unzip autoconf file g++ gcc libc-dev make pkg-config re2c memcached redis-server mcrypt
 
 # Install Apache & PHP5 packages
-RUN apt-get -y install git subversion apache2 mysql-client libapache2-mod-php5 php5-mysql php5-apcu php5-curl php5-redis php5-apcu php5-gd php5-mcrypt php5-memcached php5-sqlite php5-common php5-dev \
+RUN apt-get -y install apache2 mysql-client libapache2-mod-php5 php5-mysql php5-apcu php5-curl php5-redis php5-apcu php5-gd php5-mcrypt php5-memcached php5-sqlite php5-common php5-dev \
 
 # 用完包管理器后安排打扫卫生可以显著的减少镜像大小
     && apt-get clean \
@@ -40,6 +40,6 @@ ADD run.sh /run.sh
 
 RUN chmod +x /*.sh
 
-EXPOSE 80
+EXPOSE 22 80
 
 CMD ["/run.sh"]
