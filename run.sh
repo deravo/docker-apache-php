@@ -10,12 +10,12 @@ fi
 
 php5enmod mcrypt
 
-source /etc/apache2/envvars
+# source /etc/apache2/envvars
 
 # tail -F /var/log/apache2/* &
 
-/etc/init.d/apache2 start
+apache2ctl start
 
 # exec apache2 -D FOREGROUND
 
-exec php -a
+exec /usr/sbin/sshd -D
