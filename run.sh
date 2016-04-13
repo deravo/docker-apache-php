@@ -14,6 +14,8 @@ source /etc/apache2/envvars
 
 # tail -F /var/log/apache2/* &
 
-exec apache2 -D FOREGROUND
+/etc/init.d/apache2 start
+
+# exec apache2 -D FOREGROUND
 
 
