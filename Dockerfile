@@ -40,7 +40,7 @@ ADD run.sh /run.sh
 
 RUN chmod +x /*.sh
 
-ENTRYPOINT ["run.sh"]
+ENTRYPOINT ["/run.sh"]
 
 EXPOSE 80
 
