@@ -40,10 +40,8 @@ ADD run.sh /run.sh
 
 RUN chmod +x /*.sh
 
+ENTRYPOINT ["run.sh"]
+
 EXPOSE 80
 
-CMD ["/run.sh"]
-# RUN /hiredis.sh
-
-# RUN /etc/init.d/memcached start
-# RUN /etc/init.d/redis-server start
+CMD ["php", "-a"]
